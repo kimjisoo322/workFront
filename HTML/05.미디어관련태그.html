@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 관련 태그</title>
+</head>
+<body>
+    <h1>미디어 관련 태그</h1>
+    <!-- HTML5부터는 플러그인 기능을 사용하지 않고 미디어(오디오, 비디오)를 직접
+         HTML문서에서 실행시킬 수 있는 태그를 제종한다.-->
+
+    <h2>오디오 관련 태그</h2>
+<!--
+        - src : 오디오 파일의 경로 지정
+        - controls : 재생 도구 출력 지정
+        - autoplay : 자동재생여부 지정 (크롬x)
+        - loop     : 반복재생여부 지정
+        - preload  : 미리 오디오 파일을 다우로드할지 여부를 지정 
+--> 
+    <audio src = "media/spring.mp3" controls autoplay></audio>
+     이 오디오를 듣기 위해서는 html5를 지원하는 브라우저 필요!
+    
+
+    <h2>비디오 관련 태그</h2>
+    <!--
+        - src : 오디오 파일의 경로 지정
+        - controls : 재생 도구 출력 지정
+        - autoplay : 자동재생여부 지정 (크롬x)
+        - loop     : 반복재생여부 지정
+        - preload  : 미리 오디오 파일을 다우로드할지 여부를 지정
+        - poster   : 재성전에 출력할 이미지 파일의 경로 지정
+        - width / height :  비디오태그의 너비와 높이 지정
+--> 
+    <video src='media/flight.mp4' controls poster='image/salad.jpg' width = "600" height = "500"></video>
+     이 영상을 보기 위해서는 html5를 지원하는 브라우저가 필요!
+
+</body>
+</html>
