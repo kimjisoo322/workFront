@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+    <h1>이미지 관련 태그</h1>
+    <h2>img 태그</h2>
+    <h3>src 속성과 alt 속성</h3>
+    <!-- src 속성 : 이미지의 경로를 설정하여 이미지 파일을 불러온다
+                  : (파일 확장자는 대소문자 구분을 안함)
+    -->
+    <!--img src = "image/salad.jpg"-->
+    <!-- alt 속성 : 이미지의 경로가 잘못되었거나 이미지를 표시할 수 없을 경우
+                    대체 텍스트의 용도로 사용
+    -->
+    <h5>고정크기단위</h5>
+    <img src = "image/salad.jpg" alt ="레드향 샐러드" width = "200px" height = "150px">
+    <img src = "image/salad.jpg" alt ="레드향 샐러드" width = "200px" height = "150">
+    <img src = "image/salad.jpg" alt ="레드향 샐러드" width = "200px" height = "150px">
+    <p>
+         <!--
+        width 속성과 height 속성을 사용해서 이미지의 높이와 너비 지정
+        고정크기단위(px 등)
+        가변크기단위(%)
+    -->
+    
+    <hr>
+    <h5>가변크기단위</h5>
+    <img src = "image/salad.jpg" alt ="레드향 샐러드" width = "15%" height = "150px">
+    <img src = "image/salad.jpg" alt ="레드향 샐러드" width = "15%" height = "150">
+    <img src = "image/tangerines.jpg" width = "50%" height = "300%">   
+    </p>
+
+    <hr>
+    <h5>이미지 링크 걸기</h5>
+    <a href='https://www.jeju.go.kr/index.htm'>
+    <img src = "image/salad.jpg" alt ="레드향 샐러드" width = "15%" height = "150px">
+        </a>
+    
+    <hr>
+    <h5>동영상 링크걸기</h5>
+    <object width="800" height="800" data="media/flight.mp4"></object>
+
+
+</body>
+</html>
