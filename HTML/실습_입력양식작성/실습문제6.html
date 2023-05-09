@@ -6,22 +6,60 @@
     <style>
 			#container { 
 				width:520px;
-				border:1px solid black;
+				border:1px solid rgb(7, 7, 7);
 				padding:20px 40px;
 				margin:0 auto;
 			}
-      fieldset { margin-bottom:15px; }
+      fieldset { margin-bottom:10px; }
       legend { font-weight:bold; }
 			ul {list-style-type: none;}
 			li { line-height:30px;}
     </style>
   </head>
   <body>
-		<div id="container">
-			프런트엔드 개발자 지원서
-			
+		<div id="container">	
+					<h1>프런트엔드 개발자 지원서</h1>
+					<p>HTML, CSS, Javascript 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+					<hr>
+
 			<form>
-				
+				<ul>
+					
+
+					</fieldset>
+					<li><b>개인 정보</b></li>
+					<br>
+					<ul>
+						<li>
+							이름 <input type = "text" name = "usernm" required
+									size='20' maxlength='15' placeholder='공백없이 입력하세요'> <br>
+							연락처 <input type="tel" name="usertel">
+						</li>
+					</ul>
+					
+				</ul>	
+
+				<ul>
+					<h4>지원 분야</h4>
+					<ul>
+						<li> 
+							<input type="radio" name = "subject" value='pup'>웹 퍼블리싱
+						</li>
+						<li>
+							<input type="radio" name = "subject" value='app'>웹 애플리케이션 개발
+						</li>
+						<li>
+							<input type="radio" name = "subject" value='better'>개발 환경 개선
+						</li>
+					</ul>
+
+					<h4>지원동기</h4>
+					<!-- textarea -->
+					<textarea name="motive" id="motive" required rows="5" cols="50" maxlength="60" placeholder="본사 지원 동기를 간략히 써주세요"></textarea>
+					<br>
+					<input type="submit" value="접수하기">
+					<input type="reset" value="다시 쓰기">
+				</ul>	
 			</form>
 		</div>
   </body>
