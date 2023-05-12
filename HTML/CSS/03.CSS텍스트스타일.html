@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 텍스트 스타일</title>
+    <!-- 내부 스타일 = 문서안에 포함되어있음-->
+    <style>
+
+    </style>
+    <!-- 외부 스타일 = 문서밖에 포함되어있음-->
+
+    <link rel="stylesheet" href="03.CSS텍스트스타일.CSS">
+
+</head>
+<body>
+    <h1>텍스트 스타일</h1>
+
+    <h2>1. font-family</h2>
+    텍스트의 글꼴을 지정할 때 사용
+
+    <p id ="ff1"> 글꼴변경 테스트1</p>
+    <p id ="ff2"> 글꼴변경 테스트2</p>
+    <p id ="ff3"> 글꼴변경 테스트3</p>
+
+    <p class = "web-font">
+        웹 폰트 사용 
+        <a href ="https://fonts.google.com/" target='_blank'> 구글 웹 폰트</a>
+        <br>style 태그안에 @import한 후 사용가능
+    </p>
+    
+    <h2>2. font-size</h2>
+    <ul>
+        <li id = 'size1'> px 테스트</li>
+        <li id = 'size2'> em 테스트</li>
+        <li id = 'size3'> % 테스트</li>
+    </ul>
+
+    <h2>3. font-weight</h2>
+    텍스트의 두께를 변경할 때 사용
+
+    <ul>
+        <li>원래 굵기</li>
+        <li id = "fw">굵은 글꼴</li>
+        <li id = "fw2">가늘게</li>
+        <li id = "fw3">굵게</li>
+    </ul>
+
+    <h2>4. font-variant</h2>
+    작은 대문자(소문자 크기의 대문자)로 변경할 때 사용
+    <p>I LOVE YOU</p>
+    <p id = "fv"> I lOVE yOU</p>
+
+    <h2>5. font-style</h2>
+    텍스트의 기울임을 지정할 때 사용
+    <ul>
+        <li>기울임 없음</li>
+        <li id = "fs1">italic 기울임</li>
+        <li id = "fs2">oblique 기울임</li>
+    </ul>
+
+    <h2>6. color</h2>
+    텍스트의 <span>색상</span>을 지정할 때 사용
+    <ul>
+        <li id = "c-name">색상명으로 지정</li>
+        <li id ="c-16">16진수 값으로 지정</li>
+        <li id ="c-rgb">RGB로 설정</li>
+        <li id ="c-rgba">RGBa 투명도 설정</li>
+    </ul>
+
+    <h2>7. text-decoration</h2>
+    텍스트에 줄을 그을 때 사용(위, 아래, 중간)
+    <ul>
+        <li id = "td-test">test</li> <br>
+        <li id = "td-none">none</li>
+        <li id = "td-under">underline</li> <br>
+        <li id = "td-over">overline</li>
+        <li id = "td-line-throught">line-throught</li>
+        <a href = "test.html" >test 링크</a>
+        <a href = "test.html" id = "url">test 링크</a>
+    </ul>
+
+    <h2>8. text-shadow</h2>
+    텍스트에 그림자 효과를 추가 <br> 
+    가로거리 세로거리 번짐정도 색상
+    
+    <br>
+    양수 글자의 오른쪽, 아래쪽
+    음수 글자의 왼쪽, 왼쪽 
+    <br>
+    번짐정도 : 양수값 그림자가 모든 방향으로 퍼져나가므로 크게 표현 
+
+    <br>
+        <span id ="ts1">HTML5</span>
+        <span id ="ts2">SQL</span>
+        <span id ="ts3">CSS</span>
+        <span id ="ts4">JAVA SCRIPT</span>
+   
+
+    <h2>9. text-transform</h2>
+    영문 텍스트의 대소문자 변환
+    <ul>
+        <li id ="tt1">none</li>
+        <li id ="tt2">capitalize hello</li>
+        <li id ="tt3">uppercase</li>
+        <li id ="tt4">LOWER CASE</li>
+        <li id ="tt5">full-width</li>
+    </ul>
+
+    <h10>10. line-height</h10>
+    문장사이의 줄간격을 조정하고 싶을 때 <br>
+
+    +) line-align : 정렬  <br>
+    ! center 중앙 left 왼 right 오 justify 양쪽 ! 
+
+<p class = "lh1">
+	<!-- 왼쪽 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+</p>
+<p class = "lh2">    
+	<!-- 오른쪽 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+</p>
+<p class = "lh3">
+	<!-- 가운데 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.	 	
+</p>
+<p class = "lh4">
+	<!-- 양쪽 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+</p>
+
+    <h2>10. 목록 스타일</h2>
+    <h3> 순서 없는 목록 스타일</h3>
+    
+    <ul style='list-style-type: disc;'>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+        <li>JQueary</li>
+    </ul>
+            <!-- list-style-positon : inside = 안쪽으로 들여쓰기 -->
+    <ul style='list-style-type: square; list-style-position: inside;'>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+        <li>JQueary</li>
+    </ul>
+    <ul style='list-style-type: none;'>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+        <li>JQueary</li>
+    </ul>
+    <!-- list-style-image : 이미지로 주기 -->
+    <ul style='list-style-image: url("../images/dot.png");'>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+        <li>JQueary</li>
+    </ul>
+
+    
+    <table border="1">
+        <caption>선물용과 가정용 상품 구성</caption>
+            <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>갯수</th>
+                <th>가격</th>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="2" width = "130px">선물용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>35,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~25과</td>
+                <td>52,000원</td>
+            </tr>
+    </table>
+
+
+</body>
+</html>

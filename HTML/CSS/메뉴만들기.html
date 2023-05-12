@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            /* 블릿제거 */
+            list-style: none;
+
+            /* float 해제 */
+            /* clear: both; */
+        }
+        li{
+            /*  이미지를 띄우기 위한 기능 : float! 
+                   li태그에 float을 사용했는데 여러개일 경우 
+                   ul태그에 clear:both; 를 통해 각 요소마다 float을 사용하게끔 해주기 */
+            /* float: left; */
+            border: 1px solid #777;
+            width: 100px;
+            height: 50px;
+            text-align: center; /* 가로 정렬 */
+            line-height: 50px;  /* 세로 정렬 */
+
+            display: inline-block;
+            
+        }
+        a{
+            /* a 요소(링크) = inline 요소이므로 width, height 속성을 가지지 못함 = 영역을 가지지 못함 
+                              그래서 링크를 누르려면 글씨를 눌렀어야 하는 불편함 발생! 
+                    * 해결 * display : inline-block 으로 a 요소를 변경시켜줌! 
+                    +) 메뉴가 옆으로 나열되기 위해서 메뉴 칸을 만들고 있는 요소에 display: inline-block 요소 변경! */
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href ="#">메뉴1</a></li
+        ><li><a href ="#">메뉴2</a></li>
+        <li><a href ="#">메뉴3</a></li>
+        <li><a href ="#">메뉴4</a></li>
+    </ul>
+
+    <ul>
+        <li><a href ="#">메뉴1</a></li>
+        <li><a href ="#">메뉴2</a></li>
+        <li><a href ="#">메뉴3</a></li>
+        <li><a href ="#">메뉴4</a></li>
+    </ul>
+    
+</body>
+</html>

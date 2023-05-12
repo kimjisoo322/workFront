@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+
+    <style>
+        p{
+            width: 500px;
+            height: 300px;
+            background-color: #dcdcdc; 
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+        #static{
+            position:static; /*기본값*/
+        }
+        #relative-1{
+            position: relative;
+        }
+        #relative-2{
+            position: relative;
+            /* 왼쪽에서 100px 떨어지게 */
+            left:100px;
+            /* 위에서 -50px 떨어지게(음수 위로 이동) */
+            top:-50px;
+        }
+        #fixed{
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* 오른쪽에서 30px 떨어지게 */
+            right: 30px;
+            /* 위에서 30px 떨어지게 */
+            top: 30px;
+        }
+
+/* 노란색 큰 박스 안에 작은 박스들을 넣어보자 */
+        #outer{
+            position: relative;
+        }
+        #first{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(235, 219, 94);
+        }
+        #second{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        #third{
+            width: 100px;
+            height: 100px;
+            background-color: palegreen;
+            position: absolute;
+            top:100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>포지셔닝</h2>
+    css를 이용해서 여러 요소를 적절하게 배치하는 것
+    <!-- outer가 부모.
+        부모를 기준으로 자리를 잡아서 밑에 3가지 박스가 자리를 잡음
+        relative로 부모/ absolute가 자리를 잡음 -->
+    <div id ="outer">
+    <p id = "first"></p>
+    <p id = "second"></p>
+    <P id='third'></P>
+    </div>
+    <p id = "static">
+        Anim nostrud magna culpa esse. Pariatur voluptate cupidatat eiusmod amet ad sit sit nostrud laboris ea. Laborum fugiat amet elit adipisicing irure et nulla reprehenderit mollit voluptate voluptate elit. In adipisicing et qui duis incididunt quis tempor ea Lorem culpa consequat commodo. Deserunt ullamco consequat ad reprehenderit non.
+
+Consequat quis proident veniam in pariatur cillum esse aliqua magna aute Lorem dolore nulla. Adipisicing non mollit minim quis ipsum. Enim proident ut elit irure. Quis tempor non sint veniam cupidatat in ullamco sunt fugiat irure commodo elit tempor. Enim ut ad fugiat reprehenderit id. Culpa do mollit non duis Lorem commodo officia. Dolore aliqua tempor elit do ex minim ea aliqua.
+
+Excepteur enim quis consequat eiusmod amet amet enim nostrud ullamco amet ipsum. Commodo commodo anim mollit ipsum irure dolore mollit ex ex ex deserunt consectetur. Nostrud nisi proident Lorem ex quis. Irure adipisicing et proident nisi Lorem nostrud consectetur non Lorem tempor nisi amet ipsum. Cupidatat officia est adipisicing dolore.
+    </p>
+
+    <p id = "relative-1">
+        Magna pariatur ullamco laboris aliqua exercitation sunt sint sunt exercitation eu nostrud ea dolor nisi. Commodo quis magna ullamco minim anim veniam culpa Lorem ut incididunt minim amet deserunt. Dolore sunt qui esse anim commodo commodo ea exercitation. Ad aliqua duis proident cupidatat qui nisi. Excepteur non incididunt anim sit aute enim cupidatat mollit tempor adipisicing laborum tempor ex adipisicing. Nisi mollit officia laborum deserunt non qui cillum cupidatat.
+
+Est voluptate pariatur ea pariatur esse exercitation qui irure esse. Eu ut eu commodo consectetur exercitation ex nostrud irure ex do amet. Ipsum cupidatat irure eu sint ipsum ullamco eiusmod labore magna enim qui. Consectetur eu officia est in nulla minim aute exercitation. Duis voluptate reprehenderit eiusmod qui aute do anim nostrud veniam qui consectetur pariatur cillum.
+
+Minim eiusmod aliquip nisi deserunt occaecat sint. Aliqua minim incididunt ipsum dolor adipisicing fugiat ex. Culpa ipsum cillum esse Lorem reprehenderit occaecat occaecat eiusmod commodo magna. Sint exercitation id cillum proident amet.
+    </p>
+    <p id ="relative-2">
+        Consectetur in commodo minim irure ipsum. Adipisicing est sunt quis proident excepteur consectetur elit ad veniam labore tempor dolore. Adipisicing dolor incididunt enim tempor dolor fugiat occaecat occaecat tempor voluptate amet. Lorem eu labore enim esse ullamco quis nulla qui aute labore amet nulla nostrud eiusmod. Aute nulla incididunt fugiat minim.
+
+Reprehenderit adipisicing exercitation exercitation irure commodo anim. In nostrud ea dolore est incididunt consequat Lorem deserunt. Nostrud esse laborum laborum laborum. Exercitation cillum non ut cillum.
+
+Fugiat culpa eu ex amet aliquip sunt nisi. Est in quis cillum sint ut commodo laboris laboris cillum aliqua ullamco minim pariatur anim. Officia in sunt officia proident nostrud. Nulla laboris aute nostrud exercitation eu laborum occaecat ipsum non ipsum. Ut qui tempor duis sunt irure ipsum nostrud commodo ullamco fugiat officia. Nulla ea minim fugiat do reprehenderit consectetur ipsum adipisicing ut minim.
+    </p>
+
+    <p id = "fixed"></p>
+
+    <p>
+    Culpa laboris sit ullamco aliquip consectetur do id est commodo. Lorem aute tempor dolor sint. Occaecat in amet in sit ad velit voluptate nisi occaecat consequat exercitation laboris anim excepteur.
+
+Dolor laboris ea commodo deserunt. Enim commodo velit deserunt tempor ipsum officia qui aliquip tempor et sint Lorem. Laboris qui elit cillum officia excepteur eu consequat id quis aute proident quis eiusmod in.
+    </p>
+
+    <p>
+        Anim veniam velit irure pariatur do commodo ipsum bts jimin.
+    </p>
+
+    <p>
+        Adipisicing in fugiat qui irure eiusmod bts excepteur dolore.
+    </p>
+</body>
+</html>
