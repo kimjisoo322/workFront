@@ -1,0 +1,107 @@
+pre{
+    font-size: 1.2em;
+}
+
+/* 반응 선택자 */
+/* ,를 이용하여 선택자를 나열하면 같은 스타일을 지정  */
+#activeTest, #hoverTest{
+    width: 100px;
+    height: 100px;
+    background-color: blanchedalmond;
+}
+/*  div 태그를 통해 박스 생성 > 너비, 높이, 색상 지정 */
+
+/* 사용자가 요소를 클릭하면 색상을 변경 */
+#activeTest:active{
+    background-color: tomato;
+}
+#hoverTest:hover{
+    background-color: skyblue;
+}
+input[type = button]:hover{
+    background-color: rgb(217, 148, 148);
+}
+/* 5. 상태 선택자  */
+/* 1) checked */
+input[type=checkbox]:checked{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+/* input[type=checkbox]:checked+label{
+    font-size: 1.5em;
+    background-color: orange;
+} */
+/* 2) focus */
+#userid:focus, #userpw:focus{
+    background-color: skyblue;
+}
+/* 3) */
+option:enabled{
+    background-color: pink;
+}
+/* 4) */
+option:disabled{
+    background-color: rgb(181, 174, 228);
+}
+
+button:disabled{
+    background-color: rgb(181, 174, 228);
+}
+
+/* 6. 일반 구조 선택자 (위치로 구분) */
+/* 형제 관계중 첫번째 요소를 선택 */
+#text p:first-child{
+    background-color: rgb(142, 204, 149);
+    color: white;
+}
+#text p:last-child{
+    background-color: rgb(96, 96, 198);
+    color: wheat;
+}
+/* 수식을 사용하거나 수식 대신 odd(홀수), even(짝수)_ 2n 대입 가능 */
+/* #text p:nth-child(even){
+    background-color: rgb(250, 226, 181);
+} */
+/* #text p:nth-child(odd){
+    background-color: aquamarine;
+    color: black;
+} */
+/* 뒤에서 몇번째 선택인지 */
+/* #text p:nth-last-child(2){
+    background-color: pink;
+} */
+
+/* 7. 형제 구조 선택자 (태그별로 구분) */
+#text2 p:first-of-type{
+    background-color: tomato;
+}
+#text2 p:last-of-type{
+    background-color: rgb(128, 160, 79);
+}
+#text2 p:nth-of-type(3){
+    background-color: burlywood;
+}
+#text2 p:nth-of-type(4n){
+    background-color: rgb(167, 69, 167);
+}
+
+/* 8. 부정선택자 */
+#text3 p:not(:nth-child(even)){
+    background-color: cadetblue;
+} 
+#text3 p:nth-child(even){
+    background-color: rgb(198, 203, 40);
+} 
+/* text3에 들어있는 모든 요소 중에서 짝수를 제외 */
+/* #text3 p:not(:nth-of-type(even)){
+    background-color: cadetblue;
+} */
+
+#text4 p:first-child{
+    background-color: red;
+}
+
+ #text4 p:first-of-type{
+    background-color: blue;
+} 

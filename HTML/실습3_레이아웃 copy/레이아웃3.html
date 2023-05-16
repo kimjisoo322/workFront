@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+        header{
+            width: 800px;
+            height: 150px;
+            background-color: beige;
+            
+        }
+        main{
+            width: 800px;
+            height: 600px;
+            background-color: skyblue;
+        }
+        footer{
+            width: 800px;
+            height: 150px;
+            background-color: pink;
+        }
+        header .logo{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(231, 231, 132);
+            
+        }
+        header nav{
+            width: 650px;
+            height: 150px;
+            background-color: rgb(255, 221, 52);
+            float: left;
+        }
+        main aside{
+            width: 35%;
+            height: 100%;
+            background-color: rgb(247, 165, 150);
+            float: left;
+        }
+        main .content{
+            width: 65%;
+            height: 100%;
+            background-color: rgb(216, 154, 112);
+            float: left;
+        }
+
+    </style>
+    <!-- 1번 header / main / footer 세 영역 먼저 나누기
+         2번 header 안에 있는 요소 (div, nav)
+         3번 main에 있는 요소 
+         4번 footer -->
+</head>
+<body>
+    <div class = 'wrap'>
+        <header>
+        <div class = "logo">로고영역</div>
+        <nav>메뉴영역</nav>
+        </header>
+
+        <main>
+            <aside>사이드바 영역</aside>
+            <div class='content'>메인콘텐츠 영역</div>
+        </main>
+
+        <footer></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형</title>
+    <link rel="stylesheet" href="../CSS/10.변형.css">
+    <style>
+        .box{
+            width: 0px;
+            height: 100px;
+            background-color: rgb(53, 154, 195);
+            border: 3px solid palegoldenrod;
+            transition: all 2s;
+            /* transition-duration: 2s, 1s; */
+            /* transition-property: width, height; */
+        }
+        .box:hover{
+            width: 200px;
+            height: 120px;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            background-color: rgb(197, 152, 251);
+        }
+        /* 백그라운드 색상 변경 시킬 */
+        .bg-tr{
+            background-color: palegreen;
+            /* 
+                transition-timimng-function
+                ease : 천천히 시작해서 빨라지다 천천히 끝남
+                linear : 시작부터 끝까지 같은 속도
+                ease-in : 느리게 시작
+                ease-out : 느리게 끝남
+                ease-in-out : 느리게 시작하고 느리게 끝남 
+            */
+
+            /* 모든 속성에 ease를 1초동안 */
+            transition: 1s ease-in-out;
+            transition-timing-function: ease-out;
+        }
+        .bg-tr:hover{
+            background-color: rgb(255, 224, 133);
+            border: 1px solid rgb(255, 237, 122);
+        }
+
+        .border-tr{
+            background-color: rgb(152, 251, 228);
+            border: 3px solid black;
+            transition: all ease 1s;
+            transition-timing-function: ease-in-out;
+        }
+        .border-tr:hover{
+            border-radius: 50%;
+            background-color: salmon;
+        }
+
+        .rotate{
+            background-color: blueviolet;
+            border: 1px solid black;
+            transition: all ease 3s;
+            transition-delay: 2s;
+        }
+        .rotate:hover{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(222, 150, 218);
+            transform: rotate(270deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>변형</h1>
+    <h3>좌우로 움직이기</h3>
+    <img class = 'trans-test' id = 'trans1' src='../실습5-변형/images/prod1.jpg' >
+    <h3>위 아래로 움직이기</h3>
+    <img  class = 'trans-test' id = 'trans2' src="../실습5-변형/images/prod1.jpg" alt="">
+
+    <h3>대각선으로 움직이기</h3>
+    <img  class = 'trans-test' id = 'trans3' src="../실습5-변형/images/prod2.jpg" alt="">
+
+    <h3>가로로 확대/축소</h3>
+    <img  class = 'trans-test' id = 'trans4' src="../실습5-변형/images/prod3.jpg" alt="">
+    <h3>세로로 확대/축소</h3>
+    <img  class = 'trans-test' id = 'trans5' src="../실습5-변형/images/prod3.jpg" alt="">
+    <h3>전체 확대/축소</h3>
+    <img  class = 'trans-test' id = 'trans6' src="../실습5-변형/images/prod3.jpg" alt="">
+
+    <h3>지정한 각도만큼 회전</h3>
+    <img  class = 'trans-test' id = 'trans7' src="../실습5-변형/images/rose.jpg" alt=""> 
+
+    <img  class = 'trans-test' id = 'trans8' src="../실습5-변형/images/rose.jpg" alt=""> <br>
+    <img  class = 'trans-test' id = 'trans9' src="../실습5-변형/images/rose.jpg" alt=""> 
+
+    <img  class = 'trans-test' id = 'trans10' src="../실습5-변형/images/rose.jpg" alt="">
+
+    <br>
+
+    <h1>트랜지션 Transition :)</h1>
+    웹요소의 스타일 속성이 조금씩 자연스럽게 바뀌도록
+
+    <div class = 'box'></div>
+
+    <div class = 'box1 bg-tr'></div>
+    <div class= 'box1 border-tr'></div>
+
+    <div class = 'box1 rotate'></div>
+
+</body>
+</html>

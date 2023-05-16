@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼</title>
+    <style>
+        h1{
+            padding-bottom: 20px;
+        }
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #login_wrap{
+            width: 300px;
+            height: 120px;
+            /* background-color: rgb(192, 192, 237); */
+            /* overflow: hidden; */
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        /* %로 height을 지정할 경우 부모의 높이가 지정되어 있어야 자식도 높이 지정 가능
+           px로 height을 지정할 경우 부모 높이 없어도 자식이 지정 가능 */
+         #login_form{
+            height :80%
+
+        } 
+
+        #login_form_input{
+            width: 65%;
+            height: 100%;
+            /* background-color: pink; */
+            float: left;
+        }
+        #login_form_input > input{
+            height: 50%;
+            width: 100%;
+        }
+        #login_for_btn {
+            width: 35%;
+            float: right;
+            height: 100%;
+            /* background-color: cadetblue; */
+            /* text-align: right; */
+        }
+        #login_for_btn > input {
+            width : 100%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: rgb(223, 223, 223);
+        } 
+
+        /* #login_link{
+            width: ;
+        } */
+        #login_link{
+            text-align: center;
+        }
+
+        #login_link a{
+            text-decoration: none;
+            color: black;
+            font-size: small;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <h1>로그인 폼 만들기</h1>
+    <div id = 'login_wrap'>
+        <form id = 'login_form' action="" method=''>
+            <div id = 'login_form_input'>
+                <input type='text' name ="" id ="user_id" placeholder='아이디를 입력해주세요.' required>
+                <input type='password' name='' id='user_pw' placeholder='비밀번호를 입력해주세요.' required>
+            </div>
+
+            <div id = 'login_for_btn'>
+                <input type='submit' value='로그인'>
+            </div>
+        </form>
+        
+        <div id = 'login_link'>
+            <a href="#">회원가입</a>
+            <a href='#'>아이디 찾기</a>
+            <a href="#">비밀번호찾기</a>
+        </div>
+    </div>
+</body>
+</html>

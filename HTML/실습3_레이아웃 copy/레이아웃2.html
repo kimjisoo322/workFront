@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2</title>
+    <style>
+        *{
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+        h1{
+            padding-top: 10px;
+        }
+        #container{
+            margin-top: 50px;
+            width: 900px;
+            height: 800px;
+            background-color: rgba(139, 209, 225, 0.959);
+           
+        }
+        header{
+            width: 900px;
+            height: 200px;
+            background-color: rgb(111, 239, 232);
+   
+        }
+        nav{
+            width: 300px;
+            height: 200px;
+            background-color: rgb(0, 187, 255);
+       
+            float: left;
+        }
+        main .leftside{
+            width: 400px;
+            height: 500px;
+            background-color: rgb(57, 72, 147);
+         
+            margin-left: 0px;
+        }
+        footer{
+            width: 900px;
+            height: 200px;
+            background-color: rgb(103, 134, 233);
+       
+        }
+    </style>
+</head>
+<body>
+    <h1>웹 문서 구조(시맨틱 태그)</h1>
+<div id = "container">
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <section class = "leftside"></section>
+    </main>
+    <footer></footer>
+</div>
+
+
+</body>
+</html>

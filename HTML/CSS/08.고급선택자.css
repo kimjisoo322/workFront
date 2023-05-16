@@ -1,0 +1,53 @@
+/* 후손 선택자 */
+section h1{
+    background-color: black;
+    color: white;
+}
+/* 자식 선택자 */
+section > p {
+    background-color: tomato;
+    color: antiquewhite;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+/* 인접 선택자 */
+#divtest + div{
+    background-color: skyblue;
+}
+#divtest ~ div{
+    font-weight: bold;
+    color: salmon;
+}
+
+#content + p {
+    background-color: gray;
+}
+
+/* .div-class[속성] 만 적게되면 
+     div-class에서 속성이 가진 모든 요소들 */
+.div-class[id]{
+    border: 1px solid black;
+}
+/* .div-class[속성= 속성값] 은 
+      div-class 중에서 name4인 요소만 선택 */
+.div-class[id = name4]{
+    background-color: sandybrown;
+}
+/* div 중에 class 속성에서 class로 끝나는 태그 */
+div[class$=class]{
+    background-color: rgb(182, 172, 223);
+}
+/* 속성 값이 n으로 시작되는 */
+div[id^=n]{
+    text-align: center;
+}
+/* 속성 값이 포함될 때  */
+.class-div[class*=class]{
+    background-color: yellow;
+}
+/* class 속성의 값이 p20이 포함되어 있는 경우 
+      [속성값이 띄어쓰기로 구분] */
+div[class~=p40]{
+    padding: 40px;
+    background-color: black;
+}
