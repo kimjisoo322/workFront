@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items</title>
+    <style>
+        .container{
+            /* flex 컨테이너  */
+            display: flex;
+            background-color: rgb(90, 152, 177);
+            border: 1px solid black;
+            margin-bottom: 30px;
+            height: 100px;
+             /* width: 700px;  */
+        }
+        .box{
+            background-color: beige;
+            padding: 5px 45px;
+            margin: 5px;
+            width: 80px;
+            
+        }
+        p{
+            text-align: center;
+        }
+
+        #opt1{
+            /* 교차축 시작점을 기준으로 배치 */
+            align-items: flex-start;
+        }
+        #opt2{
+            /* 교차축 끝점을 기준으로 배치 */
+            align-items: flex-end;
+        }
+        #opt3{
+            /* 교차축 중앙 기준으로 배치 */
+            align-items: center;
+        }
+        #opt4{
+            /* 문자 기준선에 맞춰 배치 */
+            align-items: baseline;
+            
+        }
+        #opt5{
+            /* 항목을 교차축에 가득차게 배치 */
+            align-items: stretch;
+        }
+
+        /* 교차축에서 특정 항목만 지정하여 정렬하고 싶다면 해당 항목에 align-self 속성 사용 */
+        /* align_self : 개별적으로 배치  */
+        .align_center{
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>교차축을 중심으로 정렬</h2>
+
+    <div class="container" id="opt1">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box align_center">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p>2</p>
+        </div>
+        <div class="box align_center">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+    <!-- 문자를 기준선으로 박스 정렬 
+          -> 그래서 각각 style로 폰트 크기를 지정해줌 -->
+    <div class="container" id="opt4">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p style = 'font-size: 14px;'>2</p>
+        </div>
+        <div class="box">
+            <p style = 'font-size: 25px;'>3</p>
+        </div>
+        <div class="box">
+            <p style = 'font-size: 10px;'>4</p>
+        </div>
+    </div>
+    <div class="container" id="opt5" >
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+</body>
+</html>

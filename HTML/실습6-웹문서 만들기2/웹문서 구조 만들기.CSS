@@ -1,0 +1,102 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    box-sizing: border-box;
+    color: black;
+}
+#container{
+    width: 1000px;
+    background-color: rgb(224, 207, 190);
+}
+
+header{
+    width: 100%;
+    height: 200px;
+    /* background-color: rgb(226, 160, 26); */
+
+}
+header .logo{
+    width: 100%;
+    height: 50%;
+    /* background-color: aqua; */
+    /* background: url(image/logo.PNG) no-repeat 200px; */
+}
+.logo>img{
+    padding-left: 250px;
+    margin-top: 20px;
+    float: left;
+}
+header .search{
+    float: left;
+    /* background-color: black; */
+    width: 40%;
+    /* height: 40px; */
+   padding-top:25px;
+}
+header .search>input:nth-child(1){
+    width: 80%;
+    height: 50px;
+    float: left;
+}
+header .search>input:nth-child(2){
+    width: 20%;
+    height: 50px;
+    float: right;
+    background: url(image/search.png) no-repeat;
+    background-size: 50%;
+    background-position: center;
+    
+}
+.nav ul{
+    clear: both;
+    padding: 0px;
+    background-color: rgb(127, 216, 216);
+}
+
+.nav>ul>li>a{
+    float: left;
+    width: 20%;
+    height: 30%;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.6em;
+    text-align: center;
+    padding: 15px;
+}
+.nav ul li>a:hover{
+    background-color: rgb(180, 210, 238);
+    border-radius: 10px 60px;
+}
+main{
+    width: 100%;
+    background-color: aquamarine;
+}
+main #leftmain{
+    background-color: wheat;
+    width: 70%;
+    
+}
+.banner img{
+    width: 100%;
+}
+.notice{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(155, 155, 212);
+
+}
+.notice p{
+    float: left;
+    padding-left: 30px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.1em;
+    
+}
+.notice ul li{
+    padding-top: 20px;
+    text-align: center;
+    float: left;
+
+   
+}

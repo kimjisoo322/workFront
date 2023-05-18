@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드레이아웃3</title>
+    <style>
+        .wrapper{
+            display: grid;
+            width: 700px;
+            height: 10vh;
+            /* 컬럼의 개수와 너비 지정 */
+             /* grid-template-columns: repeat(3,1fr);  */
+
+            grid-template-columns: 5fr 3fr 3fr; 
+            grid-template-rows: repeat(3,1fr);
+            /* background-color: #ccc; */
+            /* border: 1px solid black; */
+        }
+        .box{
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+        .box1{
+            background-color: rgb(88, 150, 221);
+            /* 박스의 선 : 3칸을 가지지만 줄은 4줄 > 1부터4까지 차지하겠다 */
+            grid-column-start: 1;
+            grid-column-end: 4;
+            /* grid-column:1/4 */
+        }
+        .box2{
+            background-color: rgb(193, 224, 146);
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .box3{
+            background-color: orange;
+            grid-column: 2/4;
+        }
+        .box4{
+            background-color: rgb(240, 217, 115);
+            grid-column: 3/4;
+        }   
+        .box5{
+            background-color: palevioletred;
+            grid-column: 1/4;
+        }   
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+    </div>
+</body>
+</html>

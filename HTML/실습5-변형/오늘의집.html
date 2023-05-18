@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 집</title>
+    <style>
+        i{
+            font-size: 3em;
+        }
+        p{
+            font-size: 2em;
+            color: rgb(113, 152, 196);
+            font-weight: bold;
+        }
+        header{
+            display: flex;
+            /* 중심축 정렬 */
+            justify-content: space-between;
+            /* 교차축 정렬 */
+            align-items: center;
+            height: 70px;
+            padding: 20px;
+            box-shadow: 2px 3px 3px 3px rgb(130, 156, 173);
+        }
+        header p #house{
+            font-size: 1.2em;
+            
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/59843f4445.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header>
+    <!-- 메뉴 바  -->
+
+    <i class="fas fa-solid fa-bars"></i>
+
+    <p>오늘의 집 <i class="fas fa-solid fa-house" id ='house' style="color: #678fd5;"></i> </p>
+
+    <!-- 알람 -->
+    <i class="fas fa-sharp fa-regular fa-bell"></i>
+</header>
+</body>
+</html>

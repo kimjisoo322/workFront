@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드레이아웃</title>
+    <style>
+         .wrapper{
+            border: 1px solid black;
+            padding: 10px;
+            display: grid;
+            /* 컬럼의 갯수와 크기 지정
+                px : 고정단위라서 컨텐츠가 길어질 경우 잘림현상 있을 수 있음 */
+                /* 200px 컬럼을 3개 만들어놓은 상태  */
+            /* grid-template-columns: 200px 200px 200px; */
+
+                /* repeat(개수, 크기) */
+            grid-template-columns: repeat(3, 200px);
+
+            /* fr(fraction단위) : 그리드컨테이너의 여유공간을 비율로 나눠 설정 */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* 행의 갯수와 크기 지정 */
+            grid-template-rows: 100px;
+
+            /* 최대값 최소값 지정 */
+            /* minmax(최소값, 최대값) */
+            grid-template-rows: repeat(2,minmax(100px,auto));
+
+            gap: 10px 20px;
+
+            row-gap: 20px;
+            column-gap: 100px;
+
+        } 
+
+        .item{
+            padding: 10px;
+            background-color: #dbdbdb;
+        }
+        /* odd : 홀수 even : 짝수 */
+        .item:nth-child(even){
+            background-color: gray;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">Nulla non eu occaecat aute nostrud minim.</div>
+        <div class="item">Nulla non eu occaecat aute nostrud minim.</div>
+        <div class="item">Nulla non eu occaecat aute nostrud minim.</div>
+        <div class="item">Nulla non eu occaecat aute nostrud minim.</div>
+        <div class="item">Nulla non eu occaecat aute nostrud minim.Nulla non eu occaecat aute nostrud minim.Nulla non eu occaecat aute nostrud minim.Nulla non eu occaecat aute nostrud minim.</div>
+    </div>
+</body>
+</html>

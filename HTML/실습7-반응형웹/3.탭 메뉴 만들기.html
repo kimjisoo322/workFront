@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭 메뉴 만들기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #tapmenu input[type=radio]{
+            display: none;
+        }
+        #tapmenu label{
+            /* border: 1px solid black; */
+            display: inline-block;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #bdbdbd;
+            padding: 20px;
+            margin: 0px;
+        }
+        #tapmenu label:hover{
+            color: black;
+        }
+        #tapmenu input:checked + label{
+            border: 1px solid #d4d4d4;
+            background-color: rgb(253, 243, 185);
+            color: rgb(105, 176, 197);
+        }
+        #tapmenu{
+            width: 100%;
+            background-color: #eee;
+            position: relative;
+        }
+        .tabcontent{
+            display: none;
+            border-top:1px solid #ccc ;
+            padding: 0px 20px;
+            line-height: 2;
+            position: absolute;
+            left: px;
+            top: 70px;
+        }
+        #tab_btn_notice:checked ~ #notice, #tab_btn_gallery:checked ~ #gallery{
+            display: block;
+        }
+        /* #tab_btn_gallery:checked ~ #gallery{
+            display: block;
+        } */
+        .content{
+            width: 500px;
+        }
+
+        #gallery ul li{
+            display: inline;
+        }
+        #gallery ul li img{
+            width: 200px;
+        }
+         #gallery{
+            background-color: aquamarine;
+            /* display: grid; */
+            width: 600px;
+        }  
+        /* grid를 줄 요소는 움직이는 애들의 윗부모한테 줘야함
+            galler */
+
+    </style>
+</head>
+<body>
+    <div id = 'content'>
+        <div id = 'tapmenu'>
+            
+            <input type="radio" name = 'tabs' id = 'tab_btn_notice' checked>
+            <!-- 라벨이 선택될 때 연결된 요소도 선택, 즉 라벨 for에 id값을 넣어서 id값을 가지는 요소도 선택됨. 
+                       라벨이 선택되어도 checked 된다. (라디오버튼은 디자인 줄 수 없어서 라벨을 만들어 라벨에 디자인을 준다) -->
+            <label for ='tab_btn_notice'>공지사항</label>
+
+            <input type="radio" name = 'tabs' id = 'tab_btn_gallery' >
+            <label for ='tab_btn_gallery'>갤러리</label>
+
+
+            <!-- 공지사항 -->
+        <article id = 'notice' class = 'tabcontent'>
+           
+            <ul>
+                <li>게시글1</li>
+                <li>게시글2</li>
+                <li>게시글3</li>
+                <li>게시글4</li>
+                <li>게시글5</li>
+            </ul>
+        </article>
+
+        <!-- 갤러리 -->
+        <article id = 'gallery'class = 'tabcontent'>
+            <h2>갤러리</h2>
+            <ul>
+                <li><img src ='images/cup-1.jpg' alt = ''>이미지1</li>
+                <li><img src ='images/cup-2.jpg' alt = ''>이미지2</li>
+                <li><img src ='images/cup-3.jpg' alt = ''>이미지3</li>
+                <li><img src ='images/cup-4.jpg' alt = ''>이미지4</li>
+                <li><img src ='images/cup-5.jpg' alt = ''>이미지5</li>
+            </ul>
+        </article>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&family=Gamja+Flower&family=Gugi&family=Hi+Melody&family=Nanum+Pen+Script&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+#container{
+    width: 1000px;
+    margin: 0px auto;
+    /* background-color: beige;  */
+}
+header{
+    width:100%;
+    height: 125px;
+    background-color: rgb(83, 144, 236);
+}
+header div{
+    width: 40%;
+    /* height: 125px; */
+    /* background-color: rgb(58, 134, 206); */
+    /* height: 100%; */
+    padding-left: 30px;
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+header div a{
+    /* background-color: rgb(156, 136, 110); */
+    width: 100%;
+    height: 100px;
+    /* padding-top: px; */
+    /* color: rgb(168, 58, 58); */
+    font-family: 'Gaegu', cursive;
+    font-family: 'Gamja Flower', cursive;
+    font-family: 'Gugi', cursive;
+    font-family: 'Hi Melody', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Mogra', cursive;
+    font-family: 'Nanum Pen Script', cursive;
+}
+header div a h1{
+    
+    font-size: 5.0em;
+    float: left;
+    color: rgb(255, 255, 255);
+
+}
+/*
+nav{
+    width: 60%;
+    float: left;
+    display: flex;
+    align-items: flex-end;
+    height: 125px;
+    padding: 10px;
+    background-color: #888787;
+}
+#topMenu>li{
+    display: inline-block;
+}
+#topMenu>li>ul{
+    display: none;
+}
+#topMenu>li:hover ul{
+    display: block;
+}
+#topMenu{
+    position: absolute;
+
+} */
+
+
+
+
+  #topMenu {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    width:50%;
+    position: absolute; 
+    top:50px;
+    right: 10px;
+    text-align: center;
+
+
+}
+  #topMenu>li {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  #topMenu li:hover ul {
+    display: block;
+  }
+  
+  #topMenu ul {
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    /* padding: 10px; */
+    list-style: none;
+    border: 2px solid #a0a0a0;
+    width: 150px;
+    /* text-align: center; */
+    overflow: hidden;
+    max-height: 0px;
+    transition: 1s all;
+  }
+  
+  #topMenu ul li {
+    margin-bottom: 5px;
+    color: rgb(201, 104, 104);
+  }
+  
+  #topMenu ul li a {
+    text-align: center;
+    color: #050505;
+  }
+  #topMenu li a{
+    color: white;
+  }
+  #topMenu span {
+    margin-left: 10px;
+  } 
+
+
+#topMenu li:hover ul{
+    max-height: 500px;
+}
+
+/* 탭 메뉴 */
+#contents{
+    width: 100%;
+    height: 350px;
+    /* background-color: pink; */
+}
+#contents>#tabMenu{
+    width: 45%;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+#tabMenu input[type=radio]{
+    display: none;
+}
+#tabMenu label{
+    /* border: 1px solid black; */
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #bdbdbd;
+    padding: 20px;
+    margin: 0px;
+}
+#tabMenu label:hover{
+    color: black;
+}
+#tabMenu input:checked + label{
+    border: 1px solid #d4d4d4;
+    background-color: rgb(238, 238, 238);
+    color: rgb(207, 21, 30);
+}
+#tabMenu{
+    width: 100%;
+    background-color: #eee;
+    position: relative;
+}
+.tabContent{
+    display: none;
+    border-top:1px solid #ccc ;
+    padding: 0px 20px;
+    line-height: 2;
+    position: absolute;
+    left: px;
+    top: 70px;
+}
+#tab1:checked ~ #notice, #tab2:checked ~ #gallery{
+    display: block;
+}
+#gallery>ul{
+     /* background-color: beige;  */
+    width: 100%;
+    height: 250px;
+    padding-top: 30px;
+}
+#gallery h2{
+    display: none;
+}
+#gallery ul li{
+    display: inline-block;
+}
+#gallery ul li img{
+    width: 118px;
+    height: 85px;
+}
+
+#contents>#links{
+    width: 55%;
+    height: 350px;
+    /* background-color: rgb(184, 133, 67);  */
+    float: left;
+}
+#links>ul{
+    margin: 0px auto;
+    padding-top: 70px;
+    padding-right: 20px;
+    
+    text-align: center;
+}
+#links ul li{
+    display: inline-block;
+    width: 150px;
+}
+
+#links ul li a img{
+    width: 130px;
+    border-radius: 50%;
+}
+a>p{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    color: #888787;
+    text-align: center;   
+}
+/* 푸터영역 */
+#footer{
+    width: 100%;
+    border: 2px solid rgb(156, 156, 156);
+}
+footer{
+    width: 100%;
+    height: 300px;
+    /* background-color: rgb(250, 186, 186); */
+}
+#bottomMenu{
+    position: relative;
+}
+#bottomMenu>ul{
+    width: 100%;
+    padding-right: 100px;
+}
+#bottomMenu>ul>li{
+    position: relative;
+    float: left;
+    border-right: 1px solid white;
+    padding: 20px;
+    /* background-color: wheat; */
+    display: inline-block;
+    /* padding-top: 10px; */
+}
+#bottomMenu>ul>li>a{
+    font-size: 1.2em;
+    color: rgb(156, 156, 156);
+}
+#sns{
+    position: absolute;
+    right: 0px;
+    top: 35px;
+}
+#company{
+    padding-left: 20px;
+    padding-top: 30px;
+}
+#company>p{
+    clear:both;
+    color: rgb(156, 156, 156);
+}
