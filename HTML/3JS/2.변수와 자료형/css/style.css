@@ -1,0 +1,41 @@
+h1 {
+  font-size:2rem;  
+  margin-bottom:20px ;
+}
+.clicked {
+  background-color:yellow;
+}
+#profile {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border:1px solid #ccc;
+  border-radius:5%;
+  padding:10px;
+}
+#desc {
+  margin:10px 20px;
+}
+p {
+  font-size:0.8rem;
+  line-height:1.8;
+}
+.user {
+  color:rgb(28, 80, 250);
+}
+.blue-italic {
+  background-color:#fff6a1;
+  font-style: italic;
+
+}
+
+.dark {
+	background-color:#222;
+	color:#eee;
+}
+.light {
+	background-color:#f0a4a4;
+  border: 1px solid black;
+	color:#eee;
+}

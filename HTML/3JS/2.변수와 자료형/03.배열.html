@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <style>
+        .area, .area2, .area3, .area4, .area5, .area6, .area7
+        , .area8, .area9{
+            border: 1px solid rgb(240, 138, 138);
+            height: 400px;
+            margin-top: 5px;
+            overflow: scroll;
+            line-height: 50px;
+        }
+
+    </style>
+    <script src="../2.변수와 자료형/03.배열.js"></script>
+
+</head>
+<body>
+    <h1>1. 배열</h1>
+    <pre>
+        자바스크립트에서 배열은 자료형을 지정하지 않기 때문에
+        <mark>한 배열 안에 모든 자료형의 데이터 보관이 가능하다.</mark>
+
+        배열 선언 시 크기를 지정하지 않고 선언할 수도 있고
+        크기를 정하고 선언할 수도 있다. 
+    </pre>
+    
+    <button id = 'btn1'>실행확인</button>
+    <div id = 'area1' class = 'area'></div>
+
+
+    <h2>2. 배열의 메소드</h2>
+    <pre>
+        배열도 하나의 객체이기 때문에 배열에서 활용할 수 있는 메소드들이 존재 
+
+        <h3>1) indexOf()</h3>
+        : 배열에서 요소가 위치한 인덱스를 반환
+        
+        <button id = 'btn2'>indexOf</button>
+        <div id = 'area2' class='area2' ></div>
+
+        <h3>2) concat()</h3>
+        : 여러개의 배열을 결합하여 새로운 배열을 리턴
+        <button id = 'btn3'>concat</button>
+        <div id = 'area3' class = 'area3'></div>
+
+        <h3>3) join()</h3>
+        : 배열의 요소들을 결합해서 하나의 문자열을 반환
+        <button id = 'btn4'>join</button>
+        <div id = 'area4' class = 'area4'></div>
+
+        <h3>4) reverse()</h3>
+        : 원본 배열의 순서를 뒤집는 메소드 
+        <button id = 'btn5'>reverse</button>
+        <div id = 'area5' class = 'area5'></div>
+
+
+        <h3> 5) sort()</h3>
+        : 배열을 오름차순(문자기준)으로 정렬하는 메소드 
+        <button id = 'btn6'>sort</button>
+        <div id = 'area6' class = 'area6'></div>
+    
+        <h3> 6) push(), pop()</h3>
+        ★ push() : 배열의 맨 뒤에 요소를 추가
+        ★ pop () : 배열의 맨 뒤에 요소를 반환 후 제거
+
+        <button id = 'btn7'>push ○ pop </button>
+        <div id = 'area7' class = 'area7'></div>
+
+        <h3> 7) shift(), unshift()</h3>
+        ★ unshift () : 배열의 맨 앞에 요소를 추가
+        ★ shift() : 배열의 맨 앞의 요소를 반환 후 제거
+
+        <button id = 'btn8'>shift ○ unshift </button>
+        <div id = 'area8' class = 'area8'></div>
+
+        <h3> 8) slice(), splice()</h3>
+        ★ slice () : 배열의 요소를 뽑아내는 메소드
+        배열.slice(시작인덱스, 끝인덱스-1)
+         -> 끝인덱스는 포함하지 않음 
+         ex) slice(2,4)
+         -> 2부터 3까지 반환
+        ** 원본 배열에는 영향을 미치지 않음 > 추출해서 반환만!
+        
+        
+        ★ splice() : 배열의 특정 인덱스 위치에 요소 제거 및 추가하는 메소드
+        배열.splice(시작인덱스, 삭제될 개수, '추가할 값'); 
+         -> 원본 배열에 영향을 미침 
+         
+        <button id = 'btn9'>slice ○ splice </button>
+        <div id = 'area9' class = 'area9'></div>
+    </pre>
+
+</body>
+</html>

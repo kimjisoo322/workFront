@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body>
+<body id = 'head' class = 'head1'>
     <h1>개요 실습 문제</h1>
 
     <hr>
@@ -43,28 +43,39 @@
 
     <script>
         function changeColor(){
-            // #div1은 아이디 선택자
-            var input1 = document.querySelector('#div1');
-            var input2= document.querySelector('#selectColor').value;
-            console.log(input1);
-            console.log(input2);
-            // #selectColor의 색상값을 가져와서 변수에 저장
-            
+            // # : 아이디 선택자, '' 안에 넣어 줍니다.
+            var div1 = document.querySelector('#div1');
+            var selectColor = document.querySelector('#selectColor');
+            console.log('div1',div1);
+            console.log('selectColor',selectColor);
+            // div1.style : 엘리먼트의 Inline Css
+            // div1.style.backgroundColor
+            // getComputedStyle(document.querySelector('#div1')).backgroundColor
+            //  selectColor의 색상값을 변수에 저장
             var color = selectColor.value;
-            var divcolor = input1.style.backgroundColor = color;
-            //  div1.style.backgroundColor = color;
-            
-            // div.style : 엘리먼트의 Inline Css
-            // getConputetedStlye(document.querySelector('#div1')).backgroundColor
-            // var boxColor = getComputedStyle(div1).backgroundColor;
-            // console.log(color);
-            // console.log(boxColor);
+            var boxColor = getComputedStyle(div1).backgroundColor;
+            console.log(color);
+            var r = parseInt(color.substr(1,2),16);
+            var g= parseInt(color.substr(3,2),16);
+            var b= parseInt(color.substr(5,2),16);
+            var rgbColor = `rgb(${r}, ${g}, ${b})`; 
 
-            if(divcolor == color){
-                alert('박스의 색상이 같습니다.');
-                input1.style.width = '200px';
-                input1.style.height = '200px';
+            console.log(rgbColor);
+            console.log(boxColor);
+            // console.log(boxColor);
+            // 1. 선택된 색상과 박스의 색상이 같다면 메세지 처리
+            if(rgbColor == boxColor){
+                alert('같은 색상입니다.');
+            }else{
+                // 박스의 배경색상을 변경
+                div1.style.backgroundColor = color;
             }
+            // 2. 박스의 크기를 200*200으로 변경
+            div1.style.width='200px';
+            div1.style.height='200px';
+            
+            let body = document.querySelector('#head');
+            body.style.backgroundColor = rgbColor;
             
         }
     </script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList 활용하기</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  </head>
+<body id = "body">
+  <h1 id="title">My Profile</h1>
+  <button id = mode> 모드변경</button>
+  <div id="profile">
+    <img src="images/pf.png" alt="도레미">
+    <div id="desc">
+      <p class="user user1">이름 : 도레미</p>
+      <p class="user user2">주소 : somewhere</p>
+      <p class="user user3">연락처 : 1234-5678</p>
+    </div>
+  </div>
+<!--  toggle 버튼  -->
+  <script>
+    title.addEventListener('click',()=>{
+      //  1. 클릭시 class 속성에 clicked를 추가 
+      // title.classList.add('clicked');
+
+      // 2. class 속성에 포함되어있는지 확인 후, 없으면 추가 있으면 삭제 
+      // title.classList.remove('clicked');
+      if (title.classList.contains('clicked')){
+        title.classList.add('clicked');
+      }else{
+        title.classList.remove('clicked');
+      }
+      // 3. toggle 
+       title.classList.toggle('clicked');
+
+    });
+    
+    let test = document.querySelector('div')
+    test.onclick = () =>{
+      test.classList.toggle('light');
+    }
+
+
+    const userName1 = document.querySelector('.user1');
+    userName1.onclick = () =>{
+      userName1.classList.toggle('blue-italic');
+      
+    }
+    const userName2 = document.querySelector('.user2');
+    userName2.onclick = () =>{
+      userName2.classList.toggle('blue-italic');
+
+    }
+    const userName3 = document.querySelector('.user3');
+    userName3.onclick = () =>{
+      userName3.classList.toggle('blue-italic');
+
+    }
+    // desc.addEventListener('click', ()=>{
+    //   desc.classList.toggle('blue-italic');
+    // });
+
+    // body.addEventListener('click', ()=>{
+    //   body.classList.toggle('dark');
+    // });
+
+
+    //  ClassList의 속성 이 가지는 메서드 
+    /*
+        add(className): 지정된 클래스명(className)을 요소의 클래스 목록에 추가합니다.
+        remove(className): 지정된 클래스명(className)을 요소의 클래스 목록에서 제거합니다.
+        toggle(className): 지정된 클래스명(className)이 요소의 클래스 목록에 이미 존재하면 제거하고, 존재하지 않으면 추가합니다.
+        contains(className): 지정된 클래스명(className)이 요소의 클래스 목록에 존재하는지 여부를 반환합니다.
+    */
+    //  JavaScript에서 클래스를 추가, 제거, 토글하거나 클래스의 존재 여부를 확인
+    mode.onclick = () =>{
+      document.body.classList.toggle('dark');
+    }
+
+    /*
+    document.body는 현재 문서(document)의 <body> 요소를 나타내는 속성(property)입니다
+
+      document.querySelector('h1')은 문서에서 첫 번째로 발견되는 <h1> 요소
+      document.body와 document.querySelector('h1')는 둘 다 문서(Document) 객체의 속성이나 메서드를 사용하여 요소에 접근하는 방법입니다. 
+      그러나 document.body는 문서의 <body> 요소를 나타내는 속성(property)이고,
+      document.querySelector('h1')은 CSS 선택자를 사용하여 문서에서 <h1> 요소를 선택하는 메서드입니다.
+    */
+  </script>
+
+</body>
+</html>

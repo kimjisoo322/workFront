@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <style>
+        .area1, .area2,.area3{
+            border: 1px solid palevioletred;
+            height: 400px;
+            line-height: 50px;
+            margin-top: 5px;
+            overflow: scroll;
+        }
+    </style>
+    <script src="../2.변수와 자료형/05.객체.js"></script>
+</head>
+<body>
+    <h1> 객체 </h1>
+
+    <hr>
+    <h2> 객체 선언</h2>
+    <pre>
+        - 중괄호{} 를 사용해서 객체를 생성하고 속성에는 모든 자료형이 올 수 있음
+        - 객체는 속성명을 사용해서 속성을 식별
+
+        * 속성명에 공백이나 특수문자 등이 포함된 경우 따옴표 '' 로 묶어서 표기 
+          또한 객체에서 접근 시 무조건 대괄호를 사용해야 객체의 속성에 접근이 가능
+         -> 특수문자, 공백이 포함된 경우 ★객체명['속성명']★ 으로 접근! 
+
+
+        속성에 접근 : 객체명.속성명, 객체명[속성명]
+    </pre>
+
+    <div class = 'area1'></div>
+    <button id = 'bts'>객체 선언</button>
+
+    <h2>객체의 메소드</h2>
+    <pre>
+        객체의 속성 중 함수 자료형인 속성 : 메소드
+    </pre>
+    <div class = 'area2'></div>
+    <button id = 'bts2'>객체 선언</button>
+
+    <h3> 객체와 반복문</h3>
+    <pre>
+        객체가 가지고 있는 모든 속성들에 순차적으로 접근하려면
+        단순 for문으로는 불가능. 따라서 for in 문을 사용해야 함.
+    </pre>
+    <div class = 'area3'></div>
+    <button id = 'bts3'>객체 선언</button>
+
+
+    <h2>객체의 속성 추가 및 제거</h2>
+    <pre>
+        객체를 생성한 이후에 새로운 속성을 추가하거나 제거할 수 있음
+        객체.name = '이름';
+        객체.name2 = '이름2'; 
+        -> 새로 추가하면 갱신됨
+        'name' in member 
+        > 해당 속성이 정의되어있으면 true, 없으면 false 반환
+        
+        delete(member.name)
+        -> 삭제가 완료되면 true 
+        삭제 후 
+        'name' in member 
+        -> false 반환 (속성이 삭제되어 없어졌기때문!)
+    </pre>
+
+    <button id = 'bts4'>객체 추가 실행</button>
+</body>
+</html>
