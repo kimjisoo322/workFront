@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>키 코드</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    #result {
+      text-align: center;
+      font-weight:bold;
+      font-size:1.5em;
+      color:crimson;
+      border: 1px solid rgb(248, 227, 170);
+    }
+  </style>
+</head>
+<body>
+  <h1>키보드의 아무 키나 눌러보세요</h1>
+
+  <div id="result"></div>
+
+  <script>
+    
+    let body = document.querySelector('body')
+    body.addEventListener('keydown', function(e){
+      let result = document.querySelector('#result');
+      console.log('키보드', e.code);
+      console.log('key', e.key);
+      console.log(e.keyCode);
+      result.innerHTML = `${e.code}<br>`;
+      result.innerHTML += `${e.key}<br>`;
+      result.innerHTML += `${e.keyCode}<br>`;
+    });
+
+
+  </script>
+</body>
+</html>
