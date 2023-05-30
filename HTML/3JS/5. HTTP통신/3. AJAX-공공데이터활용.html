@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공데이터활용</title>
+    <style>
+        *{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'result'>
+
+    </div>
+    <script>
+        let url = 'https://apis.data.go.kr/B551011/GoCamping/locationBasedList?serviceKey=2bD2F66zrXG8Df0I3eF95Qcj%2BHCO2OvmQbhwLXcD1MaL0VjeiFwekL06Em04Q58FqiNODJ4daNF%2Bt0Kmyiv4QQ%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&mapX=128.6142847&mapY=36.0345423&radius=2000&_type=json';
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', url);
+        xhr.send();
+
+        // onreadeystatechane가 실행되며 함수도 실행
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status == 200){
+                // console.log(xhr.responseText);
+                let jsObj = JSON.parse(xhr.responseText);   
+                
+                // console.log(jsObj); 
+                
+                console.log(jsObj.response.body.items.item);
+                
+                let result = document.querySelector('#result');
+                let item = jsObj.response.body.items.item;
+              
+                for(content of item){
+                    // console.log(content);
+                    result.innerHTML += `<ul>
+                                         <li>
+                                         <h1>${content.facltNm}</h1>
+                                         <p> <img src = ${content.firstImageUrl}> </p>
+                                         <p>${content.intro}</p>
+                                        </li>
+                                        </ul>
+                                       ` ;
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
