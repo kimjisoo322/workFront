@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공데이터활용-Form</title>
+    <style>
+        *{
+            list-style: none;
+        }
+    </style>
+    <script src="../5. HTTP통신/6. AJAX-공공데이터활용_Form.js"></script>
+</head>
+<body>
+    <form id = 'campForm'>
+        numOfRows
+        <input type="text" name = 'numOfRows' value = '10'> 한페이지 결과수<br>
+
+        pageNo
+            <input type="text" name = 'pageNo' value = '1'> 페이지번호 <br>
+
+        MobileOS
+        <input type="text" name = 'MobileOS' value = 'ETC'> OS 구분: IOS(아이폰), AND(안드로이드), WIN(윈도우폰), ETC(기타)<br>
+        
+        MobileApp
+            <input type="text" name = 'MobileApp' value = 'AppTest'> 서비스명(어플명)<br>
+        
+        serviceKey
+        <input type="text" name = 'serviceKey' value = '2bD2F66zrXG8Df0I3eF95Qcj%2BHCO2OvmQbhwLXcD1MaL0VjeiFwekL06Em04Q58FqiNODJ4daNF%2Bt0Kmyiv4QQ%3D%3D' > 인증키(서비스키)<br>
+
+        mapX
+            <input type="text" name = 'mapX' value = '' id ='mapX' > 경도 : GPS X좌표(WGS84 경도 좌표)<br>
+
+        mapY
+            <input type="text" name = 'mapY'  value = '' id ='mapY'> 위도 : GPS Y좌표(WGS84 위도 좌표)<br>        
+           
+        radius
+            <input type="text" name = 'radius' value = '2000' > 거리 반경 : 거리 반경(단위:m) ,Max값 20000m=20Km<br>
+        
+            <!-- type은 json 형식으로 받아오기 위해  -->
+        _type
+            <input type="text"  name = '_type' value = 'json'><br></label>    
+        
+            <!-- <input type="submit" value = '캠핑장 정보 조회' id = 'btn'> -->
+        <button id = 'btnCampInfo'> 캠핑장 정보 조회</button>
+
+    </form>
+    <div id = result></div>
+</body>
+</html>
