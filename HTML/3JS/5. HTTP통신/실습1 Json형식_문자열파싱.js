@@ -54,6 +54,7 @@ let jsonStr = `
     "grade" : 4
   }
   ]`;
+  console.log(jsonStr);
 
   // jsObj로 변경 
   let jsObj = JSON.parse(jsonStr);

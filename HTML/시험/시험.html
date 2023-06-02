@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #table {
+            width: 800px;
+            table-layout: fixed;
+            border-collapse: collapse;
+            /* border: 1px solid black; */
+            margin-top: 20px;
+        }
+        td {
+            width: 27%;
+            padding: 10px;
+            /* border: 1px solid black; */
+        }
+        legend { 
+            font-weight:bold; 
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            line-height:30px;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        .hidden{
+            display: none;
+        }
+
+    </style>
+    <script src="../시험/시험.js"></script>
+</head>
+<body>
+    <form method='post'>
+            <legend>회원 가입폼</legend>
+            <button id = 'btn'>회원가입하기</button>
+            <table id = 'table' class = 'hidden'>
+                <tr>
+                    <th><label for ="userid">ID</label></th>
+                    <td><input type = "text" name = "userid" id = "userid" placeholder='아이디 10글자 이내'></td>
+                    <td><input type="button" value="ID중복검사"></td>
+                </tr>
+                <tr>
+                    <th><label for = "ps">비밀번호</label></th>
+                    <td><input type = "password" name ="ps" id ="ps" placeholder='영문,숫자 특수문자 포함 8자 이상'></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><label for='check'>성명</label></th>
+                    <td><input type = "text" name = "check" id = "check"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type = "text">@</td>
+                    <td><input type = "text"></td>
+                    <td><select>
+                            <option value = "select" label='직접입력' selected></option>
+                            <option value = "naver.com" label='naver.com'></option>
+                            <option value = "nate.com" label='nate.com'></option>
+                            <option value = "gmail.com" label='gmail.com'></option>
+                            <option value = "daum.net" label='daum.net'></option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>핸드폰</th>
+                    <td><select>
+                            <option value = "select" label='번호선택' selected></option>
+                            <option value = "02" label='02'></option>
+                            <option value = "010" label='010'></option>
+                    </select></td>
+                    <td><input type = "text"  required>-</td>
+                    <td><input type = "text"></td>
+                </tr>
+
+                <tr>
+                    <th>성별</th>
+                    <td>
+                        <input type="radio" name="gender" id="gender" value="M"> 남자
+                        <input type="radio" name="gender" id="gender" value ="F"> 여자
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>취미</th>
+                    <td class = 'hobby'>
+                        <input type="checkbox" name="hobby" id="hobby1" value = "study" checked>
+                        <label for = "hobby1"> 공부 </label>
+                        <input type="checkbox" name="hobby" id="hobby2" value = "mountain">
+                        <label for = "hobby2"> 등산 </label>
+                        <input type="checkbox" name="hobby" id="hobby3" value = "game">
+                        <label for = "hobby3"> 게임 </label>
+                        <input type="checkbox" name="hobby" id="hobby1" value = "fishing">
+                        <label for = "hobby1"> 낚시</label>
+                        <input type="checkbox" name="hobby" id="hobby2" value = "shopping">
+                        <label for = "hobby2"> 쇼핑 </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>자기소개</th>
+                    <td>
+                        <textarea name="introduce" id ="introduce" cols="80" rows="8" style= "resize: none;" placeholder='자기소개를 100자 이내로 입력하세요'></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                        <input type="submit" value="회원가입">
+                        <input type="reset" value="취소">
+                    </td>
+
+                </tr>
+            </table>
+            
+        </form>
+</body>
+</html>
